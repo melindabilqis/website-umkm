@@ -6,26 +6,86 @@
     <title>Kedai Runcit - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Kedai Runcit</a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+    </header>
+    <nav class="subnav" aria-label="Navigasi Beranda">
+      <a href="#profil">Profil</a>
+      <a href="#menu">Menu</a>
+    </nav>
+
     <main class="page">
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-title">
         <button class="eyebrow">UMKM LOKAL</button>
-        <h1>Kedai Runcit</h1>
-        <p>Makanan lokal yang lezat, cocok untuk menemani libuaran Anda.</p>
-        <p>Alamat : Jl. Kusuma Bangsa no.9, Panjang Baru, Kec. Pekalongan Utara, Kota Pekalongan, Jawa Tengah 51141.</p>
-        <p>BUKA   : Setiap hari pukul 10.00 - 23.00 WIB.</p>
+        <h1 id="hero-title">Kedai Runcit</h1>
+        <p>kedai makanan lokal yang menyediakan
+          berbagai makanan lezat dengan harga terjangkau.</p>
+      <img src="assets/images/etalase-kopi.svg" alt="Etalase Menu Kedai Runcit" />
+      </section>
+      <section id="profil" aria-labelledby="profil-title">
+        <div class="informasi">
+          <h2 id="profil-title">Profil Kedai Runcit</h2>
+          <p class="profil-deskripsi">
+            Kedai Runcit adalah sebuah usaha UMKM lokal yang bergerak di bidang kuliner. 
+            Kami menyediakan berbagai macam makanan lokal yang lezat.
+          </p>
+          <p>Alamat : Jl. Kusuma Bangsa no.9, Panjang Baru, 
+            Kec. Pekalongan Utara, Kota Pekalongan, Jawa Tengah 51141.</p>
+          <div class="info-list">
+            <div class="info-item">
+              <strong> Jam Buka</strong>
+              <span>Setiap hari, pukul 08.00 - 23.00</span>
+            </div>
+            <div class="info-item">
+              <strong> Kontak</strong>
+              <span>0123-456-7890</span>
+            </div>
+            <div class="info-item">
+              <strong> Email</strong>
+              <span>kedairuncit@gmail.com</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section aria-labelledby="produk-title">
-        <h2 id="produk-title">Menu Best Sellers</h2>
-        <ul class="products"> 
-          <li>Mie Ayam - Rp10.000</li>
-          <li>Bakso Urat - Rp15.000</li>
-          <li>Soto Ayam - Rp12.000</li>
-        </ul>
-        <button id="promoButton" type="button">Dapatkan Promo Sekarang!</button>
+      <section id="menu" aria-labelledby="menu-title">
+        <h2 id="menu-title">Menu Makanan</h2>
+        <div class="product-list">
+          <article class="product-card">
+            <img class="gambar" src="assets/images/Mie ayam.jpg" alt="Mie Ayam Kedai Runcit" />
+            <h3>Mie Ayam</h3>
+            <p>Mie ayam dengan kuah kaldu yang lezat dan topping ayam kecap.</p>
+            <p class="price">Rp10.000</p>
+          </article>
+          <article class="product-card">
+            <img class="gambar" src="assets/images/Bakso Solo.jpg" alt="Bakso Kedai Runcit" />
+            <h3>Bakso </h3>
+            <p>Bakso dengan kuah kaldu yang lezat dan topping sayuran segar.</p>
+            <p class="price">Rp15.000</p>
+          </article>
+          <article class="product-card">
+            <img class="gambar" src="assets/images/soto.jpg" alt="Soto Kedai Runcit" />
+            <h3>Soto</h3>
+            <p>Soto dengan kuah kaldu yang lezat dan topping sayuran segar.</p>
+            <p class="price">Rp12.000</p>
+          </article>
+        </div>
+      <button id="promoButton" type="button">Dapatkan Promo Sekarang!</button>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Kedai Runcit. Data pada halaman ini bersifat dummy.</p>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
