@@ -58,3 +58,17 @@ td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
 .tim { text-align: center; margin-bottom: 20px;}
 .team-image { width: 100%; max-width: 850px; height: auto; display: block; margin: 20px auto 0; border-radius: 12px;}
 figcaption {margin-top: 8px; color: #fdfdfd; text-align: center;}
+
+.field label { display: block; margin-bottom: 6px; }
+fieldset { margin: 0 0 16px; }
+#preview-form { padding: 16px; white-space: pre-wrap; background: white; border: 1px solid #dccbbc; }
+.field { display: grid; gap: 6px; margin-bottom: 14px;}
+label,
+legend { font-weight: 700;}
+input,
+select,
+textarea,
+button {font: inherit; padding: 10px;}
+fieldset { display: grid; gap: 8px; margin: 0 0 14px; border: 1px solid #ead8c3; border-radius: 12px;}
+button { cursor: pointer;}
+.required { color: red; font-weight: bold;}
