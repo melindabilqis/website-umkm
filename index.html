@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kedai Runcit - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      strong{
+        color:beige
+      }
+      span{
+        color:beige
+      }
+    </style>
   </head>
+  
   <body>
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
     <header class="site-header">
@@ -26,10 +35,10 @@
     </nav>
 
     <main class="page">
-      <section class="hero1" aria-labelledby="hero-title">
+      <section class="hero1">
         <div class="hero-text">
           <p class="eyebrow">UMKM LOKAL</p>
-          <h1 id="hero-title">KEDAI RUNCIT</h1>
+          <h1 class="hero-title">KEDAI RUNCIT</h1>
           <h2>kedai makanan lokal yang menyediakan
             berbagai makanan lezat dengan harga terjangkau.</h2>
           <a href="tentang.html">Informasi Lebih Lanjut</a><br>
@@ -67,23 +76,48 @@
       </section>
 
       <section id="menu" aria-labelledby="menu-title">
-        <h2 id="menu-title">Menu Best Seller</h2>
-        <div class="product-list">
+        <h2 id="menu-title">Menu Andalan Kami</h2>
+        <p class="section-description">
+          Pilihan menu favorit yang bisa kamu nikmati di Kedai Runcit.
+        </p>
+        <div class="product-grid">
           <article class="product-card">
-            <img class="gambar" src="assets/images/Mie ayam.jpg" alt="Semangkuk Mie Ayam Kedai Runcit" />
-            <figcaption>Mie Ayam Bakso</figcaption>
+            <span class="product-badge">Best Seller</span>
+            <img class="gambar" src="assets/images/Mie ayam.jpg"
+             alt="Semangkuk mie ayam bakso dengan topping"/>
+            <div class="product-info">
+              <h3>Mie Ayam Bakso</h3>
+              <div class="card-actions">
+                <a href="produk.html">Lihat Produk</a>
+              </div>
+            </div>
           </article>
           <article class="product-card">
-            <img class="gambar" src="assets/images/Bakso Solo.jpg" alt="Semangkuk Bakso Kedai Runcit" />
-            <figcaption>Bakso Urat</figcaption>
+            <span class="product-badge">Best Seller</span>
+            <img class="gambar" src="assets/images/Bakso Solo.jpg"
+              alt="Semangkuk bakso urat dengan kuah hangat" />
+            <div class="product-info">
+              <h3>Bakso Urat</h3>
+              <div class="card-actions">
+                <a href="produk.html">Lihat Produk</a>
+              </div>
+            </div>
           </article>
           <article class="product-card">
-            <img class="gambar" src="assets/images/soto.jpg" alt="Semangkuk Soto Kedai Runcit" />
-            <figcaption>Soto Semarang</figcaption>
+            <span class="product-badge">Best Seller</span>
+            <img class="gambar" src="assets/images/soto.jpg"
+              alt="Semangkuk soto dengan kuah dan pelengkap"/>
+            <div class="product-info">
+              <h3>Soto Semarang</h3>
+              <div class="card-actions">
+                <a href="produk.html">Lihat Produk</a>
+              </div>
+            </div>
           </article>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <p>Kontak Kami: 0123-456-7890. ||  IG: @kedairuncit.  ||   Email: kedairuncit@gmail.com</p>
       <p>&copy; 2026 Kedai Runcit. Data pada halaman ini bersifat dummy.</p>

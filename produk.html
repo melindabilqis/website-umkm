@@ -6,6 +6,7 @@
     <title>Produk Kedai Runcit - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+  
   <body>
     <a class="skip-link" href="#konten">Lewati ke konten utama</a>
     <header class="site-header">
@@ -26,10 +27,10 @@
     </nav>
 
     <main class="page">
-      <section class="hero1" aria-labelledby="hero-title">
+      <section class="hero1">
         <div class="hero-text">
           <p class="eyebrow">PRODUK KAMI</p>
-          <h1 id="hero-title">KEDAI RUNCIT</h1>
+          <h1 class="hero-title">KEDAI RUNCIT</h1>
           <h2>kedai makanan lokal yang menyediakan
             berbagai makanan lezat dengan harga terjangkau.</h2>
         </div>   
@@ -38,35 +39,59 @@
         </div>
       </section>
 
-        <div class="product-list">
+        <div class="product-grid">
           <article class="product-card">
-            <img class="gambar" src="assets/images/Mie ayam.jpg" alt="Mie Ayam Kedai Runcit" />
+            <span class="product-badge">Best Seller</span>
+            <img class="gambar" src="assets/images/Mie ayam.jpg"
+             alt="Semangkuk mie ayam bakso dengan topping"/>
+            <div class="product-info">
+              <h3>Mie Ayam Bakso</h3>
+              <p> Mie ayam dengan tambahan bakso yang lezat dan cocok dinikmati saat makan siang. </p>
+            </div>
           </article>
           <article class="product-card">
-            <img class="gambar" src="assets/images/Bakso Solo.jpg" alt="Bakso Kedai Runcit" />
+            <span class="product-badge">Best Seller</span>
+            <img class="gambar" src="assets/images/Bakso Solo.jpg"
+              alt="Semangkuk bakso urat dengan kuah hangat" />
+            <div class="product-info">
+              <h3>Bakso Urat</h3>
+              <p> Bakso urat dengan kuah hangat yang nikmat untuk menemani waktu bersantai. </p>
+            </div>
           </article>
           <article class="product-card">
-            <img class="gambar" src="assets/images/soto.jpg" alt="Soto Kedai Runcit" />
+            <span class="product-badge">Best Seller</span>
+            <img class="gambar" src="assets/images/soto.jpg"
+              alt="Semangkuk soto dengan kuah dan pelengkap"/>
+            <div class="product-info">
+              <h3>Soto Semarang</h3>
+              <p> Soto dengan kuah gurih dan pelengkap yang cocok untuk menu makan sehari-hari. </p>
+            </div>
           </article>
-        </div>   
+        </div> 
         <p></p>  
 
       <section id="kategori" class="hero" aria-labelledby="kategori-title">
-        <h2 id="kategori-title">Menu Kami</h2>
-        <h3 class="kategori">Makanan</h3>
-        <ul>
-          <li>Bakso</li>
-          <li>Mie Ayam</li>
-          <li>Soto</li>
-        </ul>
-        <h3 class="kategori">Minuman</h3>
-        <ul>
-          <li>Teh</li>
-          <li>Wedang Jeruk</li>
-          <li>Air putih</li>
-        </ul>
+        <h2 class="kat-title">Menu Kami</h2>
+        <div class="kategori-container">
+          <div class="kategori-item">
+            <h3 class="kategori">Makanan</h3>
+            <ul>
+              <li>Bakso</li>
+              <li>Mie Ayam</li>
+              <li>Soto</li>
+            </ul>
+          </div>
+          <div class="kategori-item">
+            <h3 class="kategori">Minuman</h3>
+            <ul>
+              <li>Teh</li>
+              <li>Wedang Jeruk</li>
+              <li>Air putih</li>
+            </ul>
+          </div>
+        </div>
       </section>
-      
+
       <section id="harga" class="hero" aria-labelledby="harga-title">
         <h2 id="harga-title">Daftar Harga</h2>
         <table>
