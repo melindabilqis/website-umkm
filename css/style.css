@@ -37,7 +37,7 @@
   box-sizing: border-box;
 }
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 body {
   margin: 0;
@@ -66,10 +66,6 @@ a {
 }
 a:hover {
   color: var(--color-text);
-}
-img {
-  max-width: 100%;
-  height: auto;
 }
 section {
   margin-bottom: var(--space-5);
@@ -126,6 +122,8 @@ figcaption {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
+  flex-direction: column;
+  align-items: flex-start;
 }
 .brand {
   display: inline-block;
@@ -145,6 +143,7 @@ figcaption {
   flex-wrap: wrap;
   gap: var(--space-2);
   list-style: none;
+  flex-direction: column;
 }
 .nav li {
   margin: 0;
@@ -183,6 +182,7 @@ figcaption {
   box-shadow: var(--shadow-card);
   font-family: Arial, sans-serif;
 }
+
 .hero .eyebrow {
   color: var(--color-text);
 }
@@ -198,7 +198,8 @@ figcaption {
 
 /* Hero dengan logo */
 .hero1 {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
@@ -215,7 +216,41 @@ figcaption {
   max-width: 100%;
   object-fit: contain;
 }
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  text-align: left;
+  padding: 36px;
+  color: var(--color-text);
+  background: var(--color-primary-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  font-family: Arial, sans-serif;
+}
 
+.hero .eyebrow {
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-align: left;
+}
+
+.hero h1 {
+  margin: 20px 0;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.hero h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+}
 /* Subnavigasi halaman */
 .subnav {
   width: min(100% - 32px, 920px);
@@ -286,13 +321,14 @@ figcaption {
 }
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-4);
   margin-block: var(--space-4);
 }
+
 .product-card {
   position: relative;
-  display: grid;
+  display: flex;
   flex-direction: column;
   min-width: 0;
   margin: 0;
@@ -304,12 +340,22 @@ figcaption {
   box-shadow: var(--shadow-card);
   text-align: left;
 }
+
+.product-card .gambar {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
 .product-card h3 {
   text-align: center;
 }
 .button,
 button {
-  display: flex;
+  display: inline-flex;
   max-width: 100%;
   margin-top: var(--space-3);
   padding: 10px 16px;
@@ -326,14 +372,6 @@ button {
 button:hover {
   color: var(--color-button-text);
   background: var(--color-card2);
-}
-/* Gambar menu */
-.product-card .gambar {
-  display: grid;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: var(--radius-sm);
 }
 
 /* Badge di atas kartu */
@@ -396,7 +434,7 @@ button:hover {
 /*MEDIA DAN GALERI*/
 
 .gambar {
-  display: block;
+  display: grid;
   width: 200px;
   height: auto;
   margin: 0 auto;
@@ -416,13 +454,13 @@ button:hover {
 }
 
 /* Susunan tiga kartu per baris */
+.gallery-grid,
 .gallery-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-4);
   margin-block: var(--space-4);
 }
-
 /* Kartu makanan */
 .media-card {
   position: relative;
@@ -537,33 +575,35 @@ td {
 background: var(--color-utama);
 }
 
-
-
-
 /*FORM DAN PREVIEW */
 form {
+  width: 100%;
   min-width: 0;
   max-width: 100%;
   margin-block: var(--space-3);
-  padding: var(--space-3);
+  padding: var(--space-4);
   background: var(--color-primary-strong);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
 }
+
 .field {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 6px;
   margin-bottom: 14px;
+  width: 100%;
 }
-.field label,
-label,
-legend {
+
+.field label {
   font-weight: 700;
 }
+
 .field input,
 .field select,
 .field textarea {
+  display: block;
   width: 100%;
   min-width: 0;
   max-width: 100%;
@@ -618,64 +658,133 @@ audio {
   margin-inline: auto;
 }
 
-/*HANDPHONE*/
-@media (max-width: 480px) {
-  .page {
-    width: calc(100% - 24px);
-    padding-block: 20px;
-  }
-  .site-header {
-    padding: 12px;
-  }
-  .brand {
-    font-size: 18px;
-    letter-spacing: 0.1em;
-  }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.page,
+.hero,
+.hero1,
+.product-grid,
+.gallery-grid,
+.gallery-list,
+.product-card,
+.media-card {
+  min-width: 0;
+}
+.kategori-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.kategori-item {
+  width: 100%;
+  min-width: 0;
+}
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll table {
+  width: 100%;
+  min-width: 40rem;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* Mobile atau layar kecil: 42rem */
+@media (min-width: 42rem) {
+
   .nav ul {
-    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .nav li a {
-    padding: 8px 10px;
-    font-size: 14px;
+
+  .gallery-grid,
+  .gallery-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .hero,
+
+  .kategori-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .kategori-item {
+    flex: 1 1 15rem;
+  }
+}
+
+/* Tablet atau layar menengah: 48rem */
+@media (min-width: 48rem) {
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero1 {
-    padding: 20px;
-    border-radius: var(--radius-md);
+    grid-template-columns: minmax(0, 1fr) 200px;
   }
+}
+
+/* Laptop atau layar lebar: 60rem */
+@media (min-width: 60rem) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav ul {
+    width: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-grid,
+  .gallery-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* Sembunyikan logo dan gambar hero di layar HP */
+@media (max-width: 48rem) {
+  .hero1 .hero-logo,
+  .hero1 .hero-logo img,
+  .hero .hero-image,
+  .hero > img {
+    display: none;
+
+  }
+  .hero > .team-image {
+    display: grid;
+    
+  }
+
   .hero1 {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px 20px;
   }
-  .hero1 .hero-logo {
-    flex-basis: auto;
-    align-self: center;
-    margin-inline: auto;
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    overflow-wrap: normal;
+    word-break: normal;
   }
-  .hero1 .hero-logo img {
-    width: 120px;
-    height: 120px;
-  }
-  .subnav {
-    width: calc(100% - 24px);
-    padding: 12px;
-    justify-content: center;
-    gap: 12px;
-  }
-  .informasi {
-    padding: 18px;
-  }
-  .product-card {
-    padding: 16px;
-  }
-  .media-card {
-    padding: 12px;
-  }
-  .media-card img {
-    height: 190px;
-  }
-  .site-footer {
-    padding: 20px 12px;
+
+  .hero p {
+    max-width: 100%;
   }
 }
