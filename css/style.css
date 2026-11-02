@@ -840,3 +840,13 @@ img {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+.stock-badge.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+#produk-unggulan {
+  font-weight: 700;
+  color: var(--color-primary, #6f3b1f);
+}
